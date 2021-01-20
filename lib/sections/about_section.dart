@@ -31,8 +31,8 @@ class About extends StatelessWidget {
       alignment: Alignment.center,
       color: Color(0xFF241E30),
       height: (size.width < screenCritPoint)
-          ? size.height + size.height / 4.5 * 4 //magic numbers
-          : size.height + size.height / 5.5 + 50,
+          ? 1500 //magic numbers
+          : 1100,
       width: size.width,
       child: Column(
         children: [
