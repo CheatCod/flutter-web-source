@@ -3,10 +3,9 @@ import 'package:flutter_website/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProjectItem extends StatelessWidget {
-  final String title, subtitle;
-  Image image = Image.network(
-      "https://media.discordapp.net/attachments/483152207676571649/800283095085088778/unknown.png?width=309&height=165");
-  ProjectItem({this.title, this.subtitle, this.image});
+  final String title, subtitle, imageLink;
+  ProjectItem(
+      {this.title, this.subtitle, this.imageLink = 'assets/psw-manager.jpg'});
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +18,18 @@ class ProjectItem extends StatelessWidget {
           : size.width / 5,
       margin: EdgeInsets.all(size.width / 40),
       decoration: new BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-      ),
+          image: DecorationImage(
+            image: AssetImage(imageLink),
+            fit: BoxFit.cover,
+          ),
+          color: Colors.grey,
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          )),
       child: Stack(
+        fit: StackFit.loose,
         alignment: AlignmentDirectional.centerStart,
         children: [
-          FittedBox(
-            fit: BoxFit.cover,
-            child: image,
-          ),
           Positioned(
             bottom: 15,
             left: 15,

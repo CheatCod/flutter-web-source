@@ -15,10 +15,12 @@ class About extends StatelessWidget {
     ProjectItem(
       title: "Covid-19 App",
       subtitle: "Simple and easy to use covid tracker",
+      imageLink: "assets/covid19-app.png",
     ),
     ProjectItem(
       title: "Note.Working",
       subtitle: "Smart calculator app aims to help student with math problems",
+      imageLink: "assets/noteworking.png",
     ),
   ];
 
